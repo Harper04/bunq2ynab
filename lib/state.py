@@ -11,7 +11,7 @@ from lib.log import log
 
 class State:
     state_fn = helpers.fname_to_path("state.json")
-    ssm_path = "bunq2ynab-state"
+    ssm_path = os.environ.get("SSM_STATE_PATH")
 
     def __init__(self):
         self.state = {

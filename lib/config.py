@@ -13,7 +13,7 @@ from lib.log import log
 
 class Config:
     config_fn = helpers.fname_to_path("config.json")
-    ssm_path = "bunq2ynab-config"
+    ssm_path = os.environ.get("SSM_CONFIG_PATH")
 
     def __init__(self):
         self.parser = argparse.ArgumentParser()
